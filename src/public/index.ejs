@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API Server</title>
+  <link rel="stylesheet" href="/public/libs/swagger-ui/swagger-ui.css" />
+</head>
+<body>
+  <p>Hello!</p>
+  <div id="swagger-ui" data-api-url="<%= apiUrl %>"></div>
+  <script src="/public/libs/swagger-ui/swagger-ui-bundle.js" crossorigin></script>
+  <script>
+    const apiUrl = document.getElementById("swagger-ui").dataset.apiUrl;
+    window.onload = () => {
+      window.ui = SwaggerUIBundle({
+        url: `/raw-api/${apiUrl}`,
+        dom_id: "#swagger-ui",
+      });
+    };
+  </script>
+  <script src="/reload/reload.js"></script>
+</body>
+</html>
