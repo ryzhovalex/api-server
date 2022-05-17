@@ -44,7 +44,7 @@ function fetchApiDir() {
   if (!apiDir) {
     throw new CliError(`
       You should specify directory with your api files as first argument, e.g.:
-      \tnode app.js -e html,css,js /srv/www/api`);
+      \tnode app.js /srv/www/api`);
   }
   if (!fs.existsSync(apiDir)) {
     throw new NoSuchDirError(`

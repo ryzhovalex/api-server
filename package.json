@@ -11,6 +11,7 @@
     "reload": "^3.2.0"
   },
   "scripts": {
+    "prod": "node src/app.js",
     "dev": "nodemon src/app.js -e html,css,js"
   },
   "repository": {
