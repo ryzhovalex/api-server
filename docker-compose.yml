@@ -1,0 +1,7 @@
+version: "3"
+services:
+  api-server:
+    container_name: api-server
+    build: ./
+    ports:
+      - 5011:5011
